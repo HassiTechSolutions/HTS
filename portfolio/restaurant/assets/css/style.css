@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* Container with Carousel Styling */
+.container-with-carousel {
+    position: relative;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Transparent Navbar Styling */
+.navbar-transparent {
+    background-color: transparent !important;
+    color: #fff !important;    
+}
+
+/* Solid Navbar Styling */
+.navbar-solid {
+    background-color: #ffffff !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #fff !important;
+}
+
+/* Navbar Item Transition */
+.navbar-nav .nav-item {
+    transition: 0.2s ease-in;
+    box-sizing: border-box;
+}
+.navbar-nav .nav-item:hover {
+    border-bottom: 1.5px solid rgb(111, 109, 109);
+    box-sizing: border-box;
+}
+/* Default border-bottom color when not scrolled */
+.navbar-nav .nav-item:hover{
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+/* Change color when scrolled */
+.navbar-scrolled .navbar-nav .nav-item:hover {
+    border-bottom: 1.5px solid rgb(52, 52, 52);
+}
+.navbar-nav .nav-item a{
+    color: rgb(255, 255, 255);
+}
+
+/* Navbar Active Item Styling */
+.navbar-nav .nav-item .active {
+    font-weight: 500;
+    border-bottom: 1.5px solid rgb(111, 109, 109);
+    transition: 0.3s ease-in;
+}
+
+/* Navbar Active Item Styling */
+.navbar-nav .nav-item .active {
+    font-weight: 500;
+    border-bottom: 1.5px solid white; /* Change border-bottom color to white */
+    transition: 0.3s ease-in;
+}
+
+/* Additional styling for transparent navbar */
+.navbar-transparent .navbar-nav .nav-item .active {
+    border-bottom: 1.5px solid white; /* Adjust color for transparency */
+}
+.navbar-solid .navbar-nav .nav-item .active {
+    border-bottom: 1.5px solid rgb(24, 24, 24); /* Adjust color for transparency */
+}
+
+/* Navbar Item Text Alignment */
+.nav-item a {
+    text-align: center;
+}
+/* Button Navbar before */
+.btn-outline-light:hover{
+    background-color: #f5f5f5;
+    color: black;
+}
+
+/* Container Content Styling */
+.container-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+/* Heading Styling */
+.container-content h1 {
+    font-family: Caveat;
+    font-size: 5rem;
+}
+.container-content h5 {
+    font-family: Caveat;
+    font-size: 2rem;
+}
+.container-content p {
+    font-family: Caveat;
+    font-size: 1.3rem;
+}
+
+
+/* Contact Icons Styling */
+.contact-icons {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+}
+
+/* Social Media Icons Styling */
+.contactIcons div a i {
+    font-size: 1.7rem;
+    height: 50px;
+    width: 50px;
+    background-color: #f5f5f5;
+    color: #3f3e3e;
+    display: flex;
+    border-radius: 45px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+/* Dark Theme Social Media Icons Styling */
+.contact-icons div a i {
+    font-size: 1.2rem;
+    height: 50px;
+    width: 100%;
+    background-color: #424242;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+/* Utensils Icon Styling */
+.fa-utensils {
+    font-size: 3rem;
+}
+
+/* Food Image Hover Effect */
+.food div div img {
+    transition: .2s ease;
+}
+
+/* Food Image Hover Transformation */
+.food .row div img:hover {
+    transform: scale(1.02);
+    overflow: hidden;
+}
+
+/* Button Styling */
+.btn-transparent{
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0px;
+}
+.btn-transparent:hover{
+    background-color: black;
+    color: #fff;
+    /* font-weight: bold; */
+}
+.btn-solid{
+    height: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px;
+}
+
+/* Bottom Text Styling */
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 80%;
+    min-width: 55%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 7px;
+}
+
+/* Remove Text Decoration from Links */
+a {
+    text-decoration: none;
+}
+
+/* Navbar Togler */
+.navbar-toggler{
+    color: #000000 !important;
+}
+
+/* Six Div Styling */
+.sixDivSection{
+    background-image: url('../img/bg-sec-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sixDivSection .container .row div img{
+    transition: .2s ease;
+}
+.sixDivSection .container .row div img:hover{
+    transform: scale(1.01);
+}
+
+/* banner-sec Styling */
+.banner-sec{
+    background-image: url('../img/bg-sec.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Team Div Section */
+.bg-team{
+    background-color: #f5f5f5;
+}
+.img-team{
+    width: 100%;
+    height: 100%;
+}
+.teamDiv .teamTxt{
+    margin: 8% 0;
+}
+.teamDiv div div h1{
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.teamDiv div div h2{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    line-height: 10px;
+    font-size: 1.4rem;
+}
+.teamDiv div div h3{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    line-height: 10px;
+    font-size: 1.2rem;
+}
+.teamDiv div div p{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    color: #797878;
+    line-height: 19px;
+}
+.teamDiv div  .text-italic{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    color: #797878;
+    line-height: 19px;
+    font-style: italic;
+}
+.teamDiv div h3{
+    font-family:  sans-serif;
+    font-style: italic;
+    line-height: 12px;
+}
+.HRteam{
+    margin: 3% 0;
+    border: 2px solid gray;
+}
+
+
+/* Contact Form Styling */
+.form-sec{
+    background-image: url('../img/bg-form.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-sec{
+    color: #fff;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+.form-sec .container div h1{
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.form-sec .container div form .row div input{
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #9191913d;
+}
+form #inputMessage{
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #9191913d;
+    min-height: 50px;
+    max-height: 350px;
+}
+form .btn{
+    width: 250px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 0px;
+    background-color: #9191913d;
+}
+form .btn:hover{
+    font-weight: bold;
+}
+
+/* Footer Area Styling */
+.footerArea > div{
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+.footerArea > div h2{
+    font-size: 1.3rem;
+}
+.footerArea > div p{
+    font-size: 0.84rem;
+}
+.footerArea > div button{
+    font-size: 0.84rem;
+}
+.footerIcons a i,.footerIcons .row i{
+    height: 40px;
+    width: 40px;
+    background-color: #f5f5f5;
+    color: #424242;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    transition: .2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.footerIcons a i:hover,.footerIcons .row i:hover{
+    color: rgb(252, 255, 236);
+    background-color: #000000;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT US PAGE CSS STYLING CODE */
+
+.contact-sec h2{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.contact-sec h5{
+    font-family: sans-serif;
+    margin-top: 30px;
+    font-weight: 500;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="shortcut icon" href="../../static/hassiTech.PNG" type="image/x-icon">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS style Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+        <div class="container-fluid ">
+            <a class="navbar-brand " href="#">CheckMat<span class="e">e</span></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="container d-lg-flex justify-content-end">
+                <ul class="navbar-nav navLists "> <!-- Apply ml-auto class here -->
+
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact us</a>
+                      </li>
+        
+                      <li class="nav-item">
+                        <a class="nav-link" href="#login">Login</a>
+                      </li>
+
+
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#about">About us</a>
+                    </li>
+      
+                    
+                    
+                  </ul>
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+
+      <section class="container-fluid bg-light d-flex " id="home">
+        <div class="container text-center  d-block my-auto">
+            <h1 class="fs-1">Welcome to CheckMate</h1>
+        </div>
+      </section>
+
+      <section class="container-fluid bg-secondary" id="contact">
+        <div class="container text-center py-4"><h1>Contact Us</h1></div>
+        <form class="container ">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <input type="text" placeholder="Enter Name" class="form-control">
+                </div>
+                <div class="col-6">
+                    <input type="text" placeholder="Enter Email" class="form-control">
+                </div>
+                <div class="col-12 my-2">
+                    <input type="text" placeholder="Subject" class="form-control">
+                </div>
+                <div class="col-12 my-2">
+                    <div class="">
+                        <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
+                      </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success mx-auto d-block my-2 col-2 col-sm-4">Submit</button>
+                </div>
+            </div>
+        </form>
+      </section>
+
+
+
+      <section class="container-fluid bg-light" id="login">
+        <div class="container text-center py-4"><h1>Login Here</h1></div>
+        <form class="container col-lg-4 col-sm-6 col-md-6 col ">
+            <div class="row mt-3 ">
+                <div class="col-12 my-2 d-flex loginInput">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username / Email" class="form-control loginName ">
+                        <i class="fa-solid fa-whatsapp "></i>
+                </div>
+                <div class="col-12 my-2 d-flex loginInput">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="text" placeholder="Password ..." class="form-control loginPass">
+                        <a href=""><i class="fa-solid fa-eye-slash"></i></a>
+                        <!-- <i class="fa-solid fa-eye"></i> -->
+                </div>
+               
+               
+                <div class="col-10 mx-auto ">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                            </div>
+                            
+                        </div>
+                        <div class="col-6 text-end frgt">
+                            <a href="" class="text-dark ">Forgot Password ?</a>
+                          </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <button class="btn btn-light mx-auto d-block my-3 col-3 col-sm-4 loginBtn">Login</button>
+                </div>
+
+            </div>
+        </form>
+      </section>
+
+      <footer class="container-fluid bg-success ">
+                <p class="col mt-3 text-white">Copyright 2023 <span class="text-dark"> EVP </span>| All Rights Reserved.</p>
+            <div class="col-lg-4 col-md-5 col-sm-6 col px-3">
+                <div class=" navLists row">
+                    <div class="col "><a class="text-white" href="">Privacy</a></div>
+                    <div class="col "><a class="text-white" href="">Terms and Conditions</a></div>
+                </div>
+            </div>
+    </footer>
+
+
+   
+    <script>
+
+        // Get all the navigation links and sections
+var menuLinks = document.querySelectorAll('.nav-link');
+var sections = document.querySelectorAll('section');
+
+// Function to check if an element is in the viewport
+function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to update the active menu link
+function updateActiveMenu() {
+    for (var i = 0; i < sections.length; i++) {
+        if (isElementInViewport(sections[i])) {
+            menuLinks.forEach(link => link.classList.remove("active"));
+            menuLinks[i].classList.add("active");
+            break; // Exit the loop when the first section in view is found
+        }
+    }
+}
+
+// Initial call to updateActiveMenu to set the initial state
+updateActiveMenu();
+
+// Listen for the scroll event and update the active menu link accordingly
+window.addEventListener("scroll", updateActiveMenu);
+
+
+    </script>
+    
+</body>
+</html>

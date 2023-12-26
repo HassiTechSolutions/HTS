@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+button, i,li,a:hover{
+    cursor: pointer;
+    background: transparent;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.bgblue{
+    background-color: rgb(48, 48, 187);
+    height: 260px;
+}
+nav , .nav-items{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+.nav-items{
+    padding: 8px 0px;
+}
+nav{
+    padding: 8px 6.5%;
+}
+.logo{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+.drop{
+    margin-left: 29px;
+    font-size: 0.8rem;
+}
+.drop i{
+    font-size: 0.56rem;
+}
+.sub-header{
+    height: 230px;
+    background-color: rgb(24, 82, 24);
+    width: 88%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 6%;
+    border-radius: 10px;
+}
+.search-bar{
+    position: relative;
+    top: -85px;
+    width: 35%;
+}
+#input{
+    width: 220%;
+    height: 43px;
+    border: none;
+    outline: none;
+    padding: 7px 12px;
+    border-radius: 25px;
+    margin: 7px;
+    position: relative;
+    top: 105%;
+    right: 62%;
+}
+.search-bar i{
+    background-color: midnightblue;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    color: #fff;
+    position: relative;
+    top: 55%;
+    left: 149.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn button{
+    width: 80px;
+    height: 30px;
+    margin-left: 8px;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: #fff;
+}
+.btn :first-child{
+    background: transparent;
+    outline: none;
+    color: #fff;
+}
+.subheader .txt{
+    text-align: center;
+}
+p{
+    font-size: 0.8rem;
+}
+.five-tabs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 190%;
+    width: 100%;
+    position: relative;
+    top: 50px;
+    padding: 25px;
+}
+.tabs{
+    height: 125px;
+    width: 15%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px lightgray;
+}
+.keywords{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 3% 0;
+}
+.keywords h1{
+    font-weight: 400;
+    padding: 20px;
+    margin: 0 10%;
+    text-align: center;
+}
+.words{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.words button{
+    border-radius: 25px;
+    padding: 2px 5px;
+    gap: 5px;
+    border: 2px solid lightgrey;
+    background-color: #fff;
+    margin: 2px;
+}
+
+.assets{
+    width: 100%;
+    display: grid;
+    grid-gap: 40px;
+    padding-bottom: 80px;
+}
+.assets .txt{
+    padding-left: 1%;
+}
+.asset{
+    display: grid;
+    width: 93%;
+    height: 350px;
+    margin: 0 6.5%;
+}
+.six-divs{
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+}
+.divs{
+    background-color: gray;
+    height: 50%;
+    width: 30%;
+    border-radius: 10px;
+    margin: 5px;
+}
+.register{
+    width: 85%;
+    height: 120px;
+    margin: 0 6.9%;
+    color: #fff;
+    background-color: blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.register .txt{
+    text-align: center;
+    margin: 0 0 22px 0;
+}
+.register button{
+    padding: 7px;
+    width: 80px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    background-color: #fff;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 0 6.95%;
+}
+.info{
+    display: flex;
+    background-color: #a7a4a49d;
+    width: 100%;
+    border-radius: 20px;
+
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    width: 55%;
+    padding: 5% 10%;
+}
+.h2{
+    width: 80%;
+}
+.h2 h2{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+.list{
+    display: flex;
+    grid-gap: 12px;
+}
+.list i{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #b1abab;
+}
+.list-detail{
+    display: grid;
+}
+.img{
+    width: 45%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+
+}
+
+
+.resources{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.resources .txt{
+    text-align: center;
+    padding: 20px;
+}
+.resource-divs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    grid-gap: 10px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    grid-gap: 10px;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 50%;
+    grid-gap: 10px;
+}
+.one{
+    width: 100%;
+    background-color: gray;
+    height: 200px;
+}
+.two{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    grid-gap: 10px;
+
+
+}
+.hOne{
+    width: 50%;
+    background-color: gray;
+
+}
+
+.register2{
+    width: 100%;
+    margin-left: 3px;
+    color: #fff;
+    margin-top: 40px;
+    background-image: radial-gradient(rgb(40, 33, 105),rgb(78, 10, 69));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+}
+.register2 .txt2{
+    margin: 5px 20px;
+}
+.register2 button{
+    padding: 7px;
+    width: 80px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    margin: 1.7% 8% 0;
+    background-color: #fff;
+    color: blue;
+}
+
+.blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 60%;
+}
+.blogs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+.blogs .txt{
+    text-align: center;
+}
+
+.blog{
+    display: grid;
+    flex-direction: column;
+    width: 33.3%;
+    margin: 20px 0;
+}
+.blog-divs{
+    display: flex;
+    width: 100%;
+    grid-gap: 1.1%;
+}
+.blog-img{
+    width: 100%;
+    height: 150px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.blog span{
+    margin-top: 9px;
+    color: rgb(94, 94, 94);
+    font-size: .8rem;
+}
+.blog p{
+    font-weight: 700;
+}
+
+.footer{
+    height: 360px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items:  baseline ;
+}
+footer{
+    background-color: rgb(14, 14, 121);
+    width: 100%;
+    margin-top: 40px;
+    height: 320px;
+    align-items: flex-end;
+}
+.first-part{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+}
+.footer-content li{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: .8rem;
+}
+.inputs{
+    width: 28%;
+    position: relative;
+    right: -10%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.inputs input{
+    width: 280px;
+    height: 35px;
+    border-radius: 25px;
+    position: relative;
+    padding: 0 12px;
+    color: darkgray;
+    top: -27px;
+    right: 20%;
+    border: none;
+    outline: none;
+}
+.inputs button{
+    height: 35px;
+    border: none;
+    outline: none;
+    width: 80px;
+    position: relative;
+    background-color: yellow;
+    top: -27px;
+    right: 29%;
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+.social-icons{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    left: 84%;
+    top: -60px;
+    display: inline-flex;
+}
+.social-icons i{
+    margin: 0 2px 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.fa-facebook, .fa-behance{
+    background-color: rgb(50, 99, 235);
+
+}
+.fa-twitter{
+    background-color: rgb(75, 173, 230);
+}
+.fa-youtube{
+    background-color: rgb(241, 62, 18);
+}
+
+.second-part hr{
+    width: 100%;
+    border: 0.0005rem solid rgb(88, 88, 88);
+}
+.end{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6%;
+    grid-gap: 10px;
+}
+.end li,span{
+    font-size: .8rem;
+    margin-top: 5px;
+}
