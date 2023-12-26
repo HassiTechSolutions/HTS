@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+    <title>HTML Course by HaSsi Tech</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        footer {
+            background-color: #616161;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        footer p{
+            color: #fff;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex .p, .flex iframe{
+            width: 50vw;
+            padding: 10px;
+        }
+        .p h2{
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 500px){
+    
+        .flex{
+            flex-direction: column;
+        }
+        .flex .p, .flex iframe{
+            width: 100vw;
+            padding: 10px;
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Welcome to the Web Development Journey!</h1>
+        <div class="flex">
+            <div class="p">
+                <h2>HTML Course</h2>
+                <p>Here we'll dive into the fundamentals of HTML (HyperText Markup Language), the backbone or Structure of every web page.</p>
+         
+            </div>
+            <!-- YouTube Video Embed -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z09KLFBilQc" frameborder="0" allowfullscreen></iframe>
+       
+         </div>
+    </center>
+
+
+    <section>
+        <h2>Chapter 1: Introduction to HTML</h2>
+        <p><strong>HTML Basics:</strong> HTML is a markup language used to structure content on the web. A basic HTML document consists of elements like <strong>&lt;html&gt;</strong>, <strong>&lt;head&gt;</strong>, and <strong>&lt;body&gt;</strong>.</p>
+        <p><strong>HTML Tag <em>&lt;html&gt;</em>:</strong> The <strong>&lt;html&gt;</strong> tag contains the entire HTML document. It serves as the root element, defining the document type and providing a container for all other elements.</p>
+        <p><strong>Head Tag <em>&lt;head&gt;</em>:</strong> The <strong>&lt;head&gt;</strong> tag’s content remains invisible to the user. Within this tag, crucial information is housed, including the document's title (<strong>&lt;title&gt;</strong>), character set, linked stylesheets, and scripts.</p>
+        <p><strong>Body Tag <em>&lt;body&gt;</em>:</strong> The <strong>&lt;body&gt;</strong> tag contains the visible content of the HTML document, such as text, images, links, and more. It delineates what users see when visiting a webpage.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Chapter 2: Text Content Tags</h2>
+        <p><strong>Working with Text:</strong> In this chapter, we'll see HTML tags designed for handling text content. From headings (<strong>&lt;h1&gt;</strong> to <strong>&lt;h6&gt;</strong>) to paragraphs (<strong>&lt;p&gt;</strong>), lists (<strong>&lt;ul&gt;</strong>, <strong>&lt;ol&gt;</strong>, <strong>&lt;li&gt;</strong>).</p>
+        <p><strong>Formatting Text:</strong> Explore how to format text using tags like <strong>&lt;b&gt;</strong> for bold, <strong>&lt;i&gt;</strong> for italics, and <strong>&lt;u&gt;</strong> for underline. Discover the power of the <strong>&lt;span&gt;</strong> tag for inline styling (Also can be done through CSS).</p>
+        <p><strong>Creating Links:</strong> Master the art of hyperlinking. Understand the <strong>&lt;a&gt;</strong> tag and its attributes for linking to other pages, both internal and external.</p>
+        <p><strong>HTML Forms:</strong> Learn to use tags like <strong>&lt;form&gt;</strong>, <strong>&lt;input&gt;</strong>, <strong>&lt;textarea&gt;</strong>, and <strong>&lt;button&gt;</strong> to create dynamic input fields, checkboxes, radio buttons, and submit buttons. Understand how form attributes such as action and method control form behavior.</p>
+        <p><strong>HTML Tables:</strong> From <strong>&lt;table&gt;</strong> to <strong>&lt;tr&gt;</strong> (table row), <strong>&lt;td&gt;</strong> (table data), and <strong>&lt;th&gt;</strong> (table header), we'll explore how to organize and present data effectively. Learn to customize tables with attributes like colspan and rowspan.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Chapter 3: Media Content Tags</h2>
+        <p><strong>Embedding Images:</strong> We'll cover the <strong>&lt;img&gt;</strong> tag and explore attributes for specifying image sources, alt text, and more.</p>
+        <p><strong>Adding Audio and Video:</strong> Understand how to embed audio (<strong>&lt;audio&gt;</strong>) and video (<strong>&lt;video&gt;</strong>) files, and discover the controls and options available.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Chapter 4: Mostly Used HTML Tags</h2>
+        <p><strong>Semantic HTML:</strong> Discover the importance of semantic HTML. Dive into tags like <strong>&lt;header&gt;</strong>, <strong>&lt;footer&gt;</strong>, <strong>&lt;nav&gt;</strong>, and <strong>&lt;section&gt;</strong>. Understand how these tags enhance the structure and accessibility of your web page.</p>
+        <p><strong>Grouping Content:</strong> Explore the <strong>&lt;div&gt;</strong> tag and its role in grouping and structuring content. Learn how to use <strong>&lt;span&gt;</strong> for inline grouping.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 HTML Course for Beginners by HaSsi Tech</p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HaSsi Tech Web</title>
+     <!-- Fav-icon -->
+    <link rel="shortcut icon" href="static/hassiTech.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <!-- Custom CSS -->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .logoHTS{
+        color: yellow;
+        margin: 5px 0;
+        text-shadow: 1px 2px 5px rgb(183, 187, 188);
+      }
+      .logoHTS span{
+        color: rgb(0, 251, 255);
+      }
+        body{
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            position: relative;
+            height: 100vh;
+        }
+        .cl{
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            height: 85vh;
+            margin-top: 0;
+        }
+        .clock img{
+            width: 70px;
+            position: absolute;
+            left: 50%;
+            border-radius: 20%;
+            transform: translate(-50%);
+            top: 60px;
+            z-index: 3;
+        }
+        .clock{
+            background-color: rgb(49,47,47);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            color: #fff;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 20px rgba(0,0,0,0.7);
+            font-size: 26px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .clock ul li{
+            list-style: none;
+            position: absolute;
+            text-align: center;
+            transform: rotate(calc(30deg * var(--i)));
+            inset: 5px;
+        }
+
+        .clock ul li span{
+            transform: rotate(calc(-30deg * var(--i)));
+            display: inline-block;
+        }
+
+        .clock:after{
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .needle{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .needle span{
+            width: 5px;
+            height: var(--h);
+            background-color: var(--clr);
+            position: absolute;
+            border-radius: 5px;
+        }
+        .navbar{
+        background-color:#1A1F36;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1071;
+        margin-bottom: 0;
+       }
+       .con{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+  .classanimate {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 30%;
+    justify-content: center;
+    color: #fff;
+    text-align:center;
+    border-radius: 30%;
+    background: #262626;
+    position: relative;
+    padding: 30px;
+    z-index: 2;
+  }
+
+  .classanimate::after,
+  .classanimate::before {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    animation: animated-shadow 10s linear infinite alternate;
+  }
+
+  .classanimate::after {
+    filter: blur(30px);
+  }
+
+  @keyframes animated-shadow {
+    0% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 100% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " >
+      <a class="navbar-brand py-2" href="landing.html">
+        <img src="static/c.png" width="150px" >
+        <!-- <h2 class="logoHTS">< HaSsi <span>Tech</span> /></h2> -->
+   
+       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Apps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="apps/calculators.html">Find your required Marks for final-term.</a>
+              <a class="dropdown-item" href="#">CGPA to Percentage Converter.</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Car Driving Course
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="car/cardriving.html">Car Driving (Manual)</a>
+              <a class="dropdown-item" href="car/carengine.html">Car Engine and Dashboard</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mobile Repairing Course
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="mobile/mobintro.html">Mobile Phone Introduction</a>
+              <a class="dropdown-item" href="mobile/tiaa.html">Network Technologies and Useful Abbreviations</a>
+              <a class="dropdown-item" href="mobile/somp.html">Sections of Mobile Board </a>
+              <a class="dropdown-item" href="mobile/smd.html">Suface Mounting Devices ( SMD )</a>
+              <a class="dropdown-item" href="mobile/ic.html">Integrated Circuit ( IC )</a>
+              <a class="dropdown-item" href="mobile/rtl.html">Repairing Tools list</a>
+              <a class="dropdown-item" href="mobile/rtu.html">Repairing Tools Usage</a>
+              <a class="dropdown-item" href="mobile/ocapanal.html">OCA Panal Dissembly</a>
+              <a class="dropdown-item" href="mobile/battery.html">Battery and its Types</a>
+              <a class="dropdown-item" href="mobile/cjp.html">Charging Jack</a>
+              <a class="dropdown-item" href="mobile/wdp.html">Water Damaged Phones</a>
+              <a class="dropdown-item" href="mobile/dmts.html">Dead Mobiles and their Solutions</a>
+              <a class="dropdown-item" href="mobile/smfts.html">Some Major Faults and their Solutions</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="mobile/apmf.html">All Possible Mobile Faults </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="mobile/simimei.html">What is SIM Card and IMEI Number?</a>
+    
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="about/aboutus.html">About Me</a>
+          </li>
+        </ul>
+           
+              <a href="signup.html">
+                  <button class="btn btn-success  mr-2 my-2 my-sm-0" >
+                  Sign Up  
+                    </button></a>
+              <a href="login.html">
+                  <button class="btn btn-primary mr-2 my-2 my-sm-0" >
+                  Log In  
+                    </button></a>
+        </div>
+      </nav><br>  
+    
+    <!-- Clock  -->
+    
+
+    <div class="cl">
+        <div class="con">
+            <div class="classanimate">
+            This Site is still in under Developing Stage .
+            </div>
+        </div>
+        <div class="clock">
+        
+            <div class="needle hr" style="--h:60px; --clr:white"><span></span></div>
+            <div class="needle mn" style="--h:80px; --clr:white"><span></span></div>
+            <div class="needle ss" style="--h:100px; --clr:red"><span></span></div>
+            <img src="static/logo.png" alt="logo">
+            
+            <ul>
+                <li style="--i:1"><span>1</span></li>
+                <li style="--i:2"><span>2</span></li>
+                <li style="--i:3"><span>3</span></li>
+                <li style="--i:4"><span>4</span></li>
+                <li style="--i:5"><span>5</span></li>
+                <li style="--i:6"><span>6</span></li>
+                <li style="--i:7"><span>7</span></li>
+                <li style="--i:8"><span>8</span></li>
+                <li style="--i:9"><span>9</span></li>
+                <li style="--i:10"><span>10</span></li>
+                <li style="--i:11"><span>11</span></li>
+                <li style="--i:12"><span>12</span></li>
+            </ul>
+            
+        </div>
+    </div>
+
+     
+<!-- Custom JS -->
+<script >
+        function show_clock(){
+        let h = document.getElementsByClassName('hr')[0];
+        let m = document.getElementsByClassName('mn')[0];
+        let s = document.getElementsByClassName('ss')[0];
+        let date = new Date(); 
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        h.style.transform = `rotate(${30 * hours + minutes/2}deg)`;
+        m.style.transform = `rotate(${6 * minutes}deg)`;
+        s.style.transform = `rotate(${6 * seconds}deg)`;
+        let sound = new Audio('static/sound.mp3');
+        sound.play();
+        }
+        setInterval(show_clock, 1000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Expense Checker for visiting a city</title>
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+       <!-- Bootstrap CDN -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <!-- Font Awesome CDN -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+    <style type="text/css">
+
+        body{
+            background-color: #bebebec2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5vh 0;
+            height: 100vh;
+            width: 100%;
+        }
+
+        label,p{
+            color: white;
+        }
+        
+        h1{
+            font-size: 1.9rem;
+            color: rgb(237, 247, 108);
+            font-weight: bold;
+            text-shadow: 2px 2px rgb(150, 151, 147);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" class="form-control col-12 pt-3 border bg-dark">
+        <h1>Time Checker for visiting a city</h1>
+
+        <label for="city">Enter City Name </label>
+        <input class="form-control" type="text" placeholder="Enter City Name (optoinal)" name="city" id="city">
+        <label for="km">Enter Distance in KM </label>
+        <input class="form-control" type="number" name="km" placeholder="Enter your Distance from that City" id="distance" required >
+
+        <input class="btn btn-warning d-block mx-auto mt-3 " type="button" value="Submit" onclick="submitdetails()">
+        <p class="result mt-3">Answer : </p>
+    </form>    
+
+    <script>
+            
+            function submitdetails(scope){
+
+            const city = document.getElementById('city').value;
+            const distance = parseInt(document.getElementById('distance').value);
+            const result = document.querySelector('.result');
+
+            var time30km = (distance/30).toFixed(1);
+            var time35km = (distance/35).toFixed(1);
+            var time40km = (distance/40).toFixed(1);
+            var time45km = (distance/45).toFixed(1);
+            var time50km = (distance/50).toFixed(1);
+            var time55km = (distance/55).toFixed(1);
+            var time60km = (distance/60).toFixed(1);
+
+            var timeArray = [
+            `<b> For visiting   ${city}.</b> <br>
+              <li> It will take ${time30km} hr to reach ${city}  if speed is 30km/hour. </li> 
+              <li> It will take ${time35km} hr to reach ${city}  if speed is 35km/hour. </li> 
+              <li> It will take ${time40km} hr to reach ${city}  if speed is 40km/hour. </li> 
+              <li> It will take ${time45km} hr to reach ${city}  if speed is 45km/hour. </li> 
+              <li> It will take ${time50km} hr to reach ${city}  if speed is 50km/hour. </li> 
+              <li> It will take ${time55km} hr to reach ${city}  if speed is 55km/hour. </li> 
+              <li> It will take ${time60km} hr to reach ${city}  if speed is 60km/hour. </li> `
+            ]
+        
+            result.innerHTML = `${timeArray}`;
+           
+        };
+    </script>
+</body>
+</html>

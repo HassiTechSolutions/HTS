@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marks Calculator 1 </title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+       <!-- Bootstrap CDN -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <!-- Font Awesome CDN -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+    <style>
+        body {
+            padding: 20px;
+            background-image: linear-gradient(lightblue,lightpink);
+            background-repeat: no-repeat;
+            background-position: cover;
+            width: 100%;
+        }
+
+        h1{
+            font-size: 2rem;
+            color: rgb(240, 91, 32);
+            font-weight: bold;
+            text-shadow: 2px 2px rgb(192, 230, 56);
+            text-align: center;
+        }
+        .input-container {
+            margin-bottom: 10px;
+        }
+
+        #sumResult {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        label{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Required Marks Calculator ( With GDB Section Subject)</h1>
+        <form id="sumForm">
+            <div class="input-container">
+                <label for="number1">Enter assignment weightage:</label>
+                <input type="number" id="number1" placeholder="Enter Assignment weightage:" class="form-control" required>
+                <input type="number" id="number2" placeholder="Enter GDB weightage:" class="form-control" >
+                <input type="number" id="number3" placeholder="Enter Quiz weightage:" class="form-control" required>
+                <input type="number" id="number4" placeholder="Enter Midterms weightage:" class="form-control" required>
+            </div>
+            <div class="input-container">
+                <label for="number1">Assignment Info:</label>
+                <input type="number" id="totalAss" placeholder="Enter Assignment Marks (total):" class="form-control" required>
+                <input type="number" id="obtainedAss" placeholder="Enter Assignment Marks (obtained):" class="form-control" required>
+            </div>
+            <div class="input-container">
+                <label for="number1">GDB Info:</label>
+                <input type="number" id="totalGDB" placeholder="Enter GDB Marks (total):" class="form-control" >
+                <input type="number" id="obtainedGDB" placeholder="Enter GDB Marks (obtained):" class="form-control" >
+            </div>
+            <div class="input-container">
+                <label for="number1">Quizes Info:</label>
+                <input type="number" id="totalQuizes" placeholder="Enter Quizes Marks (total):" class="form-control" required>
+                <input type="number" id="obtainedQuizes" placeholder="Enter Quizes Marks (obtained):" class="form-control" required>
+            </div>
+            <div class="input-container">
+                <label for="number1">Midterms Info:</label>
+                <input type="number" id="totalMids" placeholder="Enter Midterms Marks (total):" class="form-control" required>
+                <input type="number" id="obtainedMids" placeholder="Enter Midterms Marks (obtained):" class="form-control" required>
+            </div>
+            <!-- Add more input fields as needed -->
+            <button type="button" class="btn btn-primary" onclick="MarksCounter()">Submit</button>
+        </form>
+
+        <p id="sumResult">You required : 0</p>
+    </div>
+
+    <script>
+        function MarksCounter() {
+            const number1 = parseFloat(document.getElementById("number1").value);
+            const number2 = parseFloat(document.getElementById("number2").value);
+            const number3 = parseFloat(document.getElementById("number3").value);
+            const number4 = parseFloat(document.getElementById("number4").value);
+
+            const totalAssEl = parseFloat(document.getElementById("totalAss").value);
+            const obtainedAssEl = parseFloat(document.getElementById("obtainedAss").value);
+            const AssRatio = (obtainedAssEl/totalAssEl)*number1 ;
+
+            const totalGDBEl = parseFloat(document.getElementById("totalGDB").value);
+            const obtainedGDBEl = parseFloat(document.getElementById("obtainedGDB").value);
+            const GDBRatio = (obtainedGDBEl/totalGDBEl)*number2 ;
+
+            const totalQuizesEl = parseFloat(document.getElementById("totalQuizes").value);
+            const obtainedQuizesEl = parseFloat(document.getElementById("obtainedQuizes").value);
+            const QuizesRatio = (obtainedQuizesEl/totalQuizesEl)*number3 ;
+
+            const totalMidsEl = parseFloat(document.getElementById("totalMids").value);
+            const obtainedMidsEl = parseFloat(document.getElementById("obtainedMids").value);
+            const MidsRatio = (obtainedMidsEl/totalMidsEl)*number4 ;
+            // Add more variables for additional input fields and get their values
+
+            if (!isNaN(number1) && !isNaN(number2) && !isNaN(number3) && !isNaN(number4)) {
+                const sum = AssRatio + GDBRatio + QuizesRatio + MidsRatio;
+                
+                const requiredMarks = 50 - sum;
+                const requiredMarksEl = requiredMarks.toFixed(2);
+
+                const sumResultElement = document.getElementById("sumResult");
+                sumResultElement.innerText = "You required : " + requiredMarksEl + "% Marks in Final to secure 50% in Final Result.";
+            } else {
+                alert("Please enter valid numbers in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>

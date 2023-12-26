@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+    <title>CSS Course by HaSsi Tech</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        
+        center h1, center h2 {
+            color: #fff;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: #007bff;
+        }
+
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex .p, .flex iframe{
+            width: 50vw;
+            padding: 10px;
+        }
+        .p h2{
+            font-size: 2rem;
+        }
+
+        .code-container {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .code-container code {
+            display: block;
+            white-space: pre-wrap;
+        }
+
+        .copy-btn {
+            cursor: pointer;
+            background-color: #0974e6;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: .3s ease ;
+            float: right;
+        }
+        .copy-btn:hover{
+            background-color: #ddd;
+            color: #333;
+        }
+
+        @media screen and (max-width: 500px){
+    
+        .flex{
+            flex-direction: column;
+        }
+        .flex .p, .flex iframe{
+            width: 100vw;
+            padding: 10px;
+        }
+        
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center>
+            <h2>Welcome to the Web Development Journey!</h2>
+            <div class="flex">
+                <div class="p">
+                    <h1><strong>CSS Course</strong></h1>
+                    <p><span><strong>Prerequisites:</strong></span> Before diving into CSS, it's essential to have a basic understanding of HTML. Additionally, having a code editor like Visual Studio Code (VS Code) will make the learning process smoother, allowing you to efficiently write and manage your CSS code.</p>
+            
+                </div>
+                <!-- YouTube Video Embed -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z09KLFBilQc" frameborder="0" allowfullscreen></iframe>
+           
+             </div>
+        </center>
+    </header>
+    
+
+    <section>
+        <h2><strong>Introduction</strong></h2>
+        <p>Cascading Style Sheets (CSS) is a crucial technology for web development that empowers designers and developers to enhance the visual presentation of HTML documents. By learning CSS, you can control the layout and appearance of web pages, creating a more engaging and user-friendly experience.</p>
+
+    </section>
+
+    <section>
+        <h2><strong>Chapters</strong></h2>
+
+        <h3>1. <strong>Ways of Using CSS</strong></h3>
+        <ul>
+            <li><strong>Inline CSS:</strong> Apply styles directly within HTML tags using the style attribute.</li>
+            <li><strong>Internal CSS:</strong> Use the &lt;style&gt; tag within the HTML document to define styles in the head section.</li>
+            <li><strong>External CSS:</strong> Create a separate CSS file and link it to your HTML document. This promotes a clean and organized structure, making it easier to manage styles across multiple pages.</li>
+        </ul>
+
+        <h3>2. <strong>Targeting Elements</strong></h3>
+        <ul>
+            <li><strong>Element Selectors:</strong> Apply styles to specific HTML elements using their tag names.</li>
+            <li><strong>Class Selectors:</strong> Use classes to style multiple elements with a shared characteristic.</li>
+            <li><strong>ID Selectors:</strong> Apply unique styles to a single, specific element on the page.</li>
+            <li><strong>Descendant Selectors:</strong> Style elements that are nested within other elements, allowing for more granular control.</li>
+        </ul>
+
+        <h3>3. <strong>Most Useful Properties of CSS</strong></h3>
+        <ul>
+            <li><strong>Color Properties:</strong> Set text and background colors to create visually appealing designs.</li>
+            <li><strong>Font Properties:</strong> Control the size, style, and family of text on your web page.</li>
+            <li><strong>Border and Border-radius:</strong> Define borders around elements using properties like border-width, border-style, and border-color. Add rounded corners to elements with the border-radius property.</li>
+            <li><strong>Margin and Padding:</strong> Adjust spacing around and inside the elements for better layout control.</li>
+            <li><strong>Display Property:</strong> Define how elements should be rendered, such as in a column or in rows.</li>
+            <li><strong>Positioning:</strong> Control the position of elements on the page using properties like position.</li>
+        </ul>
+
+        <h3><strong>4. CSS Media Queries</strong></h3>
+        <p>CSS media queries are a powerful tool for making your web page responsive to different devices and screen sizes. By using media queries, you target specific types of devices, like smartphones, tablets, or desktops.</p>
+
+        <h4><strong>Basic Syntax</strong> :-</h3>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+                <code>
+                    @media screen and (max-width: 768px) {<br>
+                        /* Styles for screens up to 768 pixels wide */<br>
+                    }<br>
+                    <br>
+                    @media screen and (min-width: 769px) and (max-width: 1024px){<br>
+                        /* Styles for screens between 769 and 1024 pixels wide */<br>
+                    }<br>
+                    <br>
+                    @media screen and (min-width: 1025px) {<br>
+                        /* Styles for screens 1025 pixels wide and above */<br>
+                    }
+                </code>
+            </div>
+
+    </section>
+
+    
+    
+
+    <section>
+        <h2><strong>Conclusion</strong></h2>
+        <p>As you embark on your journey to master CSS, understanding these fundamental concepts will provide a solid foundation. Experiment with different styles and properties to unleash your creativity and transform static HTML into dynamic and aesthetically pleasing web pages. Happy coding!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 <strong>CSS Course for Beginners by HaSsi Tech</strong></p>
+    </footer>
+
+
+    <script>
+        function copyCode() {
+            const codeBlock = document.querySelector('.code-container code');
+            const range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

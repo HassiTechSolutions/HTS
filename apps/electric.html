@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Average of Electric Cost</title>
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+       <!-- Bootstrap CDN -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <!-- Font Awesome CDN -->
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+    <style type="text/css">
+        body{
+            background-image: linear-gradient(rgb(241, 241, 119),rgb(150, 224, 248));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        form{
+            width: 60%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        input:hover{
+            background-color: rgba(0, 0, 0, 0);
+        }
+        h1{
+            font-size: 1.5rem;
+            color: rgb(240, 91, 32);
+            font-weight: bold;
+            text-shadow: 2px 2px rgb(192, 230, 56);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="col-7 form-control border rounded">
+        <h1>Check Your Bill Average per Day</h1>
+        <label class="mt-3" for="Bill">Enter Amount of Bill</label>
+        <input class="col-12 " type="number" value="" placeholder="Enter Amount of Bill" id="Bill" >
+        <label class="mt-2" for="Bill">Enter Days of Month</label>
+        <input class="col-12 " type="number" value="30" placeholder="Enter days of Month" id="days" >
+        <input class="btn btn-success mt-3 mx-auto d-block" type="button" value="Submit" onclick="submitdetails()">
+        <p class="result mt-3"> Answer : </p>
+    </form>    
+
+    <script>
+            
+            function submitdetails(scope){
+
+            const billEl=parseInt(document.getElementById('Bill').value);
+            const daysEl=parseInt(document.getElementById('days').value);
+            const result = document.querySelector('.result');
+
+            var AvgPerDay=(billEl/daysEl);
+            var Avg = AvgPerDay.toFixed(2);
+
+
+            result.innerHTML = `${Avg} is you Daily average of consumed amount of day`
+        };
+    </script>
+</body>
+</html>

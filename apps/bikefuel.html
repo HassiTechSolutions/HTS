@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Expense Checker for visiting a city</title>
+    <link rel="icon" type="image/gif/png" href="../static/hassiTech.PNG">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style type="text/css">
+        body{
+            background-image: linear-gradient(rgb(241, 241, 104),rgb(43, 172, 189));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5vh 0;
+        }
+       
+        h3{
+            font-size: 1.6rem;
+            color: rgb(10, 10, 10);
+            font-weight: bold;
+            text-shadow: 2px 2px rgb(144, 200, 238);
+            text-align: center;
+        }
+        input:hover{
+            background-color: rgba(235, 243, 236, 0.493);
+        }
+        .btn{
+            display: block;
+            margin: 10px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" class="col-10 form-control">
+        <h3>Petrol Expense Checker for visiting a city</h3>
+
+        <label for="city">Enter City Name </label>
+        <input class="form-control"  type="text" placeholder="Enter City Name (optoinal)" name="city" id="city">
+        <label for="km">Enter Distance in KM </label>
+        <input class="form-control"  type="number" name="km" placeholder="Enter your Distance from that City" id="distance" required >
+        <label for="petrol">Enter Current Petrol Price per litre </label>
+        <input class="form-control"  type="number" value="284" name="petrol" placeholder="Enter Current Petrol Price " id="litre" >
+        <label for="mlg">Enter your car/bike milleage in KM </label>
+        <input class="form-control"  type="number" value="40" name="mlg" placeholder="Enter your car/bike milleage in KM " id="mlg" >
+        <label for="extra">Extra Petrol in litres </label>
+        <input class="form-control" type="number" value="2" name="extra" placeholder="Extra Petrol in litres " id="extra" >
+
+        <button class="btn btn-primary " type="button" onclick="submitdetails()">Submit</button>
+
+        <h4 class="result">Answer : </h4>
+    </form>    
+
+    <script>
+            
+            function submitdetails(scope){
+
+            const city = document.getElementById('city').value;
+            const distance = parseInt(document.getElementById('distance').value);
+            const petrol = parseInt(document.getElementById('litre').value);
+            const mlg = parseInt(document.getElementById('mlg').value);
+            const extra = parseInt(document.getElementById('extra').value);
+            const result = document.querySelector('.result');
+
+            var fuelForReaching = (distance/mlg);
+            var fuelForReturning = (distance/mlg);
+            var Total_fuel = (fuelForReaching+fuelForReturning+extra)*petrol;
+            var Total_fuel_expense = Total_fuel.toFixed(0);
+
+
+            result.innerHTML = `Answer : ${Total_fuel_expense}  pkr will be Expense for visiting  ${city}  city `
+        };
+    </script>
+</body>
+</html>

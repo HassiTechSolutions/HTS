@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salecity - Buy and Sell</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #007BFF;
+        }
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+        .form-inline {
+            display: flex;
+            align-items: center;
+        }
+        .form-control {
+            border-radius: 50px;
+            border: none;
+            outline: none;
+        }
+        .btn-primary {
+            background-color: #007BFF;
+            border-color: #007BFF;
+            border-radius: 50px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+            height: 200px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+        .btn-view-details {
+            background-color: #007BFF;
+            border-color: #007BFF;
+            border-radius: 50px;
+            padding: 6px 20px;
+            font-size: 0.9rem;
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .btn-view-details:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .footer p {
+            margin: 0;
+            color: #6c757d;
+        }
+        .search-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+        :root{
+            --blue : #9ab3f5;
+            --purple : #9a1663;
+            --white : #ffffff;
+            --shadow : rgba(0,0,0,0.15) 0px 5px 15px 0px;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            font-family: sans-serif;
+        }
+        .search-bar{
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            max-width: 550px;
+            background-color: var(--white);
+        }
+        .dropdown{
+            position: relative;
+            width: 280px;
+            border-radius: 50px;
+            border: 1px solid var(--white);
+            background-color: var(--purple);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+        .dropdown-text{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff;
+            padding: 1rem 1.5rem;
+        }
+        .dropdown-list{
+            position: absolute;
+            width: 100%;
+            top: 4rem;
+            max-height: 0;
+            overflow: hidden;
+            left: 0;
+            border-radius: 15px;
+            background-color: #ffffff;
+            transition: max-height 0.2s ease; 
+        }
+        #list.show{
+            max-height: 300px;
+        }
+        .dropdown-list-items{
+            font-size: 0.9rem;
+            color: #000000;
+            font-weight: 500;
+            padding: 1rem 0 1rem 1.5rem;
+            cursor: pointer;
+            transition: margin-left 0.2s ease;
+        }
+        .dropdown-list-items:hover{
+            margin-left: 0.5rem;
+            color: #9a1663;
+        }
+        .search-box{
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+            width: 100%;
+            color: var(--purple);
+        }
+        .search-box input{
+            padding: 1rem;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #9a1663;
+            border: 0;
+            outline: 0;
+        }
+        .search-box i{
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+        .search-box input::placeholder{
+            font-size: 1rem;
+            font-weight: 500;
+            color: #9a1663;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Salecity</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form action="" class="search-form">
+                        <div class="search-bar">
+                            <div class="dropdown">
+                                <div id="drop-text" class="dropdown-text">
+                                    <span id="span"> Pakistan </span>
+                                    <i id="icon" class="fa-solid fa-chevron-down"></i>
+                                    <ul id="list" class="dropdown-list">
+                                        <li class="dropdown-list-items">Lahore</li>
+                                        <li class="dropdown-list-items">Gujranwala</li>
+                                        <li class="dropdown-list-items">Islamabad</li>
+                                        <li class="dropdown-list-items">Karachi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="search-box">
+                                <input type="text" id="search-input" placeholder="Search Adds">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                    
+                        </div>
+                    </form>
+                
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user fa-lg"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="display-4">Welcome to Salecity</h1>
+        <p class="lead">Find the best deals for buying and selling.</p>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop for Sale</h5>
+                        <p class="card-text">$499</p>
+                        <a href="#" class="btn btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartphone Deal</h5>
+                        <p class="card-text">$299</p>
+                        <a href="#" class="btn btn-view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- More product cards here -->
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <p>&copy; 2023 Salecity. All rights reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let dropdownBtn = document.getElementById("drop-text");
+        let listBtn = document.getElementById("list");
+        let icon = document.getElementById('icon');
+        let span = document.getElementById('span');
+        let input = document.getElementById('search-input');
+        let listItems = document.querySelectorAll('.dropdown-list-items');
+
+
+        dropdownBtn.onclick = function(){
+            if(list.classList.contains('show')){
+                icon.style.rotate = "0deg";
+            }else{
+                icon.style.rotate = "-180deg";
+            }
+            listBtn.classList.toggle("show");
+        };
+
+        window.onclick = function(e){
+            if (
+                e.target.id !== "drop-text" &&
+                e.target.id !== "span" &&
+                e.target.id !== "icon" 
+            ){
+                listBtn.classList.remove("show");
+                icon.style.rotate = "0deg";
+            }
+        };
+
+        for(item of listItems){
+            item.onclick = function (e) {
+                span.innerText = e.target.innerText;
+
+                input.placeholder = "Search Adds in " + e.target.innerText + "...";
+            }
+        };
+    </script>
+</body>
+</html>
